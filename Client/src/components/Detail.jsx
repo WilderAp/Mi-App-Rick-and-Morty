@@ -30,10 +30,10 @@ const Detail = () => {
                     <img src={character.image} alt={character.name}/>
                     </div>
                     <h1 className={style.DetailName}>{character.name}</h1>
-                    <h2>Status: {character.status}</h2>
-                    <h2>Specie: {character.species}</h2>
-                    <h2>Gender: {character.gender}</h2>
-                    <h2>Origin: {character.origin?.name}</h2>
+                    <h2>Status | {character.status}</h2>
+                    <h2>Specie | {character.species}</h2>
+                    <h2>Gender | {character.gender}</h2>
+                    <h2>Origin | {character.origin?.name }</h2>
 
 
                     {/* <h2>{character?.name}</h2>

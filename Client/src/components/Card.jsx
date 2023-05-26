@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
 import style from "../App.module.css";
+import { Link } from "react-router-dom";
 import { addFav, removeFav } from '../redux/actions';
 import { connect } from "react-redux";
 import { useEffect, useState } from "react";
@@ -10,8 +10,8 @@ function Card({id, name, species, gender, image, onClose, addFav, removeFav, myF
    const [isFav, setIsFav] = useState(false);
    
    
-   const handleFavorite = (isFav) => {
-      if(!isFav){ 
+   const handleFavorite = () => { // (isFav)
+      if(isFav){                 // if(!isFav)
          setIsFav(false);
          removeFav(id);
       }
@@ -21,7 +21,7 @@ function Card({id, name, species, gender, image, onClose, addFav, removeFav, myF
       }   
    };
    
-   useEffect((id) => {
+   useEffect(() => {
       myFavorites.forEach((fav) => {
          if (fav.id === id) {
             setIsFav(true);
@@ -33,10 +33,10 @@ function Card({id, name, species, gender, image, onClose, addFav, removeFav, myF
    
    return (
       <div className={style.card}>
-     
-         <button className={style.isFav} onClick={handleFavorite}>{ isFav ? '💙' : '🤍' }</button>
-        
-         <button className={style.close} onClick={()=> {onClose(id)}}>X</button>
+         <div className={style.favButton}>
+         <button onClick={handleFavorite}>{isFav ? '💙' : '🤍' }</button>
+         </div>
+         <button className={style.close} onClick={()=> {onClose(id)}}>〔X〕</button>
       
          <h2>{name}</h2> 
          <Link to={`/detail/${id}`} >

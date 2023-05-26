@@ -1,8 +1,8 @@
-*{
+/* *{
    margin: 0;
    padding: 0;
    box-sizing: border-box;
-}
+} */
 
 
 body, html{
@@ -15,6 +15,8 @@ body, html{
    background-repeat: no-repeat;
    background-size: cover;
    margin: 0 auto;
+   display:contents; /*{flex, para mostrar todo en el centro de la página (Como mejor se vea :)) // contents para que se muestre arriba como comunmente se hace }*/
+   padding-top: 1%;
 
  }
 
@@ -41,8 +43,8 @@ body, html{
  }
 
  .botones, .botones a{
-   width: 7em;
-   height: 2em;
+   width: 10em;
+   height: 2.5em;
    margin: 1.5em;
    align-items: flex-start;
    text-decoration: none;
@@ -52,6 +54,8 @@ body, html{
    font-family: Comic Sans MS; 
    font-weight:bold;
    cursor: pointer;
+   color: #38b000;
+   
  }
 
  .close{
@@ -116,8 +120,8 @@ body, html{
 
  .logout{
    cursor: pointer;
-   width: 5em;
-   height: 2em;
+   width: 7em;
+   height: 2.5em;
    margin: 1.5em;
    align-items: flex-start;
    border-radius: 1em;
@@ -134,7 +138,7 @@ body, html{
 
 
  .card {
-   background-image: url("./components/imagenes/planeta-verde_1220x2160_xtrafondos.com.jpg");
+   background-image: url("./components/imagenes/rick-and-morty-wallpaper-supreme.jpg");
    display: inline-block;
    width: fit-content;
    border: 2px solid #000;
@@ -148,11 +152,21 @@ body, html{
    color: #38b000;
    vertical-align: top;
    text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
+    -1px -1px 0 #fcfcfc,
+    1px -1px 0 #fcfcfc,
+    -1px 1px 0 #fcfcfc,
+    1px 1px 0 #fcfcfc;
  }
+
+ .favButton{ /*{////////////////////////////}*/
+   width: 4.5px;
+   height: 6px;
+   padding-top: 3.5%;
+   padding-left: 4%;
+   border-radius: 25%;
+   border-bottom-left-radius: 2%;
+   border-top-left-radius: 25%;
+  }
 
  .isFav {
   margin-right: auto;
@@ -177,13 +191,7 @@ body, html{
   resize: none; 
 }
 
-.label{
-   text-align: center; 
-   font-family: Comic Sans MS; 
-   font-weight:bold;
-   color: #fca311;
-   font-size: medium;
-}
+
 
 .submit{
    cursor: pointer;
@@ -198,17 +206,6 @@ body, html{
    margin: 0 auto;
 }
 
-.Formulario  {
-   justify-content: center;
-   align-items: center;
-  padding: 80px;
-  max-width: 300px;
-  background-image: url("./components/imagenes/455c8856c6c30d6ca91d199af24e1617.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin: 0 auto;
-  
-} 
 
 .Form{
    
@@ -236,14 +233,3 @@ body, html{
    
 }
 
-.App{
-   grid-template-columns: auto auto auto;
-   grid-gap: 10px;grid-gap: 10px;
-   grid-row-start: auto;
-   justify-content: center;
-   align-items: center;
-   border: 10px solid #d5d7d5;
-   width: 100%;
-   height: 100%;
-   margin: 0 auto;
-}

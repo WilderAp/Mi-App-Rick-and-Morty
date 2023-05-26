@@ -6,7 +6,7 @@ import axios from 'axios';
 import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import About from './components/About';
 import Detail from './components/Detail';
-import Form from './components/Form';
+import Form from './components/Forms/Form';
 import Favorites from './components/Favorites';
 
 
@@ -21,16 +21,17 @@ function App() {
    const location = useLocation();
    const [characters, setCharacters] = useState([]);
    const [access, setAccess] = useState(false)
-   const [charRender, setCharRender] = useState(false);
-   const EMAIL = 'rick_and_morty10@gmail.com';
-   const PASSWORD = 'Hola1234@';  
+   // const [charRender, setCharRender] = useState(false);
 
-   const login = (userData) => {
-      if(userData.email === EMAIL && userData.password === PASSWORD){
-         setAccess(true);
-         navigate('/home');
-      };
-   };
+   function login(userData) {
+      const { email, password } = userData;
+      const URL = 'http://localhost:3001/rickandmorty/login/';
+      axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
+         const { access } = data;
+         setAccess(access);
+         access && navigate('/home');
+      });
+   }
 
    const logOut = () => {
       setAccess(false);
@@ -41,7 +42,9 @@ function App() {
       !access && navigate('/'); //la lógica de este useEffect, brutal! :)
    }, [access, navigate]); //No te mueves de aquí sin la validación 
    
+   // useEffect(() => {
 
+   // }, [charRender])
    
    const onSearch = (id) => {
       axios(`http://localhost:3001/rickandmorty/character/${id}`).then(({ data }) => {
