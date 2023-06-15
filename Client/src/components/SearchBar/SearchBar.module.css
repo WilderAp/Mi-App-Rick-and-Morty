@@ -2,7 +2,6 @@
     display: flex;
     align-items: center;
 }
-
 .search{
     width: 100%;
     display: flex;
@@ -43,18 +42,14 @@
       }
     }
 }
-
-
 .search::placeholder{
     color: rgb(7, 151, 15);
     font-family: Verdana, Tahoma, sans-serif;
 }
-
 .search:hover{
     /* background-color: rgba(81, 255, 110, 0.461); */
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.461), 0 0 4rem rgba(81, 255, 110, 0.461), 0 0 8rem rgba(81, 255, 110, 0.461);
 }
-
 .container button{
     margin-left: 1rem;
     border-radius: 2.5rem;
@@ -69,7 +64,6 @@
     overflow: hidden;
     transition: 300ms;
 }
-
 .container button:hover{
     cursor: pointer;
     transform: scale(1.1);

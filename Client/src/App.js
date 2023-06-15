@@ -40,7 +40,7 @@ function App() {
    
    useEffect(() => {
       !access && navigate('/'); //la lógica de este useEffect, brutal! :)
-   }, [access, navigate]); //No te mueves de aquí sin la validación 
+   }, [access, navigate]); //No te permite movevrte de aquí sin la validación 
    
    // useEffect(() => {
 
@@ -53,6 +53,7 @@ function App() {
          } else {
             alert('¡No hay personajes con este ID!');
          }
+        
       });
    };
 
@@ -61,11 +62,8 @@ function App() {
       setCharacters(characterFiltered)
    };
 
-
-
-
    return ( 
-      <div >
+      <div className={style.App}>
          
          {
            location.pathname !== '/' 
@@ -81,7 +79,6 @@ function App() {
             onClose={onClose}/>}/>
             <Route path='/detail/:id' element={<Detail/>}/>
             <Route path='/favorites' element={<Favorites/>} />
-            
          </Routes>
 
       

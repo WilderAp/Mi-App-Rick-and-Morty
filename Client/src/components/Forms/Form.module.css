@@ -1,35 +1,25 @@
-/* body {
-    align-items: center;
-    background-color: #000;
+.login_box {
     display: flex;
     justify-content: center;
-    height: 100vh;
-} */
-
-.login_box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    align-items: center;
+    min-height: 100vh;
+}
+.Formulario{
     width: 400px;
     height: 500px;
     padding: 40px;
-    transform: translate(-50%, -50%);
     background: rgba(0,0,0,.5);
-    box-sizing: border-box;
     box-shadow: 0 40px 75px rgba(47, 175, 8, 0.6);
     border-radius: 10px;
-    border: 2.5rem solid;
-    border-color: rgba(47, 175, 8, 0.6) ;
-    border-style: groove;
+    border: 2.5rem groove rgba(47, 175, 8, 0.6);
     background-image: url("../imagenes/455c8856c6c30d6ca91d199af24e1617.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 .inputsito {
-    border-radius: 1.5em; 
+    /* border-radius: none;  */
     margin-bottom: 15px;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Knewave', cursive;
     width: 100%;
     padding: 10px;
     box-sizing: border-box; 
@@ -38,10 +28,9 @@
     font-size: 1em;
     resize: none; 
 }
-
 .submit{
     cursor: pointer;
-    border-radius: 1em;
+    /* border-radius: 1em; */
     display: block;
     background-color: #0e5b20;
     padding: 10px 45px 10px 45px;
@@ -50,12 +39,114 @@
     color: 	#fca311;
     font-family: Verdana, Tahoma, sans-serif;
     margin: 0 auto;
+    
 }
-
 .label{
-    text-align: center; 
-    font-family: Comic Sans MS; 
-    font-weight:bold;
-    color: #fca311;
-    font-size: medium;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    font-family: 'Knewave', cursive;
+    font-weight:lighter;
+    color: #dcf618;
+    font-size: large;
+
  }
+
+ .login_box form button {
+    display: grid;
+    place-items: center;
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #dcf618;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-left: 55px;
+    letter-spacing: 4px
+  }
+  
+  
+  
+  .login_box button span {
+    position: absolute;
+    display: block;
+  }
+  
+  .login_box button span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #dcf618);
+    animation: btn-anim1 1s linear infinite;
+  }
+  
+  @keyframes btn-anim1 {
+    0% {
+      left: -100%;
+    }
+    50%,100% {
+      left: 100%;
+    }
+  }
+  
+  .login_box button span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #fca311);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+  }
+  
+  @keyframes btn-anim2 {
+    0% {
+      top: -100%;
+    }
+    50%,100% {
+      top: 100%;
+    }
+  }
+  
+  .login_box button span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #fca311);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+  }
+  
+  @keyframes btn-anim3 {
+    0% {
+      right: -100%;
+    }
+    50%,100% {
+      right: 100%;
+    }
+  }
+  
+  .login_box button span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #fca311);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+  }
+  
+  @keyframes btn-anim4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,100% {
+      bottom: 100%;
+    }
+  }

@@ -1,42 +1,50 @@
-/* *{
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-} */
-
-
-body, html{
-   justify-content: center;
-   align-items: center;
-   min-height: 100vh;
-   width: 100%;
-   background-image: url("./components/imagenes/rick-y-morty-escapando-de-portal_3840x2160_xtrafondos.com\ \(1\).jpg");
-   background-clip: border-box;  
-   background-repeat: no-repeat;
-   background-size: cover;
-   margin: 0 auto;
-   display:contents; /*{flex, para mostrar todo en el centro de la página (Como mejor se vea :)) // contents para que se muestre arriba como comunmente se hace }*/
-   padding-top: 1%;
-
- }
-
- /* #root{
-   width: 100%;
-   min-height: 100vh;
-   display: flex;
-   justify-content: center;
-   align-items: center;
- } */
- 
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.App{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("./components/imagenes/arnold-folls-greenscenerywallpapers4k-51\ \(1\).jpg");
+  background-color: #08330a;
+  background-clip: border-box;  
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* NAVBAR */
  .nav {
-    
+  visibility: visible;
    display: flex;
    justify-content: center;
    align-items: center;
-   height: 50px; /* ajusta la altura según sea necesario */
-   color: #132a13; /* ajusta el color del texto según sea necesario */
-   
+   height: 50px; 
+   color: #132a13; 
  }
+ .burgerMenu{
+  visibility: hidden;
+ }
+ @media screen and (max-width: 780px) {
+  .nav{
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 50px 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .burgerMenu{
+    visibility: visible;
+    position: absolute;
+    top: 35px;
+    right: 35px;
+  }
+}
 
  .busqueda {
    width: 15px;
@@ -117,7 +125,6 @@ body, html{
    background-color: #ffffff;
 }
 
-
  .logout{
    cursor: pointer;
    width: 7em;
@@ -133,9 +140,6 @@ body, html{
    background-color: #fce811;
 
  }
-
-
-
 
  .card {
    background-image: url("./components/imagenes/rick-and-morty-wallpaper-supreme.jpg");
@@ -159,13 +163,7 @@ body, html{
  }
 
  .favButton{ /*{////////////////////////////}*/
-   width: 4.5px;
-   height: 6px;
-   padding-top: 3.5%;
-   padding-left: 4%;
-   border-radius: 25%;
-   border-bottom-left-radius: 2%;
-   border-top-left-radius: 25%;
+    text-decoration: none;
   }
 
  .isFav {
@@ -181,7 +179,7 @@ body, html{
  .inputsito {
   border-radius: 1.5em; 
   margin-bottom: 15px;
-  font-family: "Roboto", sans-serif;
+  font-family: Comic Sans MS; 
   width: 100%;
   padding: 10px;
   box-sizing: border-box; 
@@ -202,7 +200,7 @@ body, html{
 	border: 0;
 	font-size: 1em; 
 	color: 	#fca311;
-   font-family: "Roboto", sans-serif;
+  font-family: Comic Sans MS; 
    margin: 0 auto;
 }
 
@@ -220,7 +218,8 @@ body, html{
    font-size: 18px; 
    color: #fbfbfb; 
    text-shadow: -1px 0 #001219, 0 1px #001219, 1px 0 #0c4f69, 0 -1px #0c445b, 1px 1px 0 #0c485f, 1px 1px 0 #001219, 0.5px 0.5px #001219, 1px 1px #001219, 1.5px 1.5px #001219, 2px 2px #001219, 3px 3px #001219, 2px 2px #001219, 2px 2px #4acc09, 4px 4px #4acc09, 3px 3px #4acc09;
-     
+   text-justify:newspaper;
+   
 }
 
 .imgAbout {
@@ -230,6 +229,39 @@ body, html{
    color: #d5d7d5;
    margin: auto;
    border: 5px solid #001219;
+   height: 600px;
+   width: 550px;
+   background-color:#0e5b20 ;
+}
+
+.favo {
+  width: 10em;
+   height: 2.5em;
+   margin: 1.5em;
+   align-items: flex-start;
+   text-decoration: none;
+   border-radius: 1em;
+   align-content: center;
+   align-items: center;
+   font-family: Comic Sans MS; 
+   font-weight:bold;
+   cursor: pointer;
+   color: #1262b8;
+   background-color: #ffffff;
    
+}
+
+.orderfav {
+  text-align: center;
+  padding-top: 1%;
+  font-family: Comic Sans MS; 
+  font-weight:bold; 
+  color: #1262b8;
+  vertical-align: top;
+  text-shadow:
+   -1px -1px 0 #d5d2d6,
+   1px -1px 0 #d5d2d6,
+   -1px 1px 0 #d5d2d6,
+   1px 1px 0 #d5d2d6;
 }
 

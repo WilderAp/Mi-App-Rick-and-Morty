@@ -39,6 +39,7 @@ function Card({id, name, species, gender, image, onClose, addFav, removeFav, myF
          <button className={style.close} onClick={()=> {onClose(id)}}>〔X〕</button>
       
          <h2>{name}</h2> 
+         <h3>{id}</h3>
          <Link to={`/detail/${id}`} >
          <img src={image} alt='character img' />
          </Link>
