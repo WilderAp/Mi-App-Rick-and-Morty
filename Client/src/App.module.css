@@ -1,9 +1,10 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-.App{
+
+.App {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -11,24 +12,27 @@
   min-height: 100vh;
   background-image: url("./components/imagenes/arnold-folls-greenscenerywallpapers4k-51\ \(1\).jpg");
   background-color: #08330a;
-  background-clip: border-box;  
+  background-clip: border-box;
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 /* NAVBAR */
- .nav {
+.nav {
   visibility: visible;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   height: 50px; 
-   color: #132a13; 
- }
- .burgerMenu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  color: #132a13;
+}
+
+.burgerMenu {
   visibility: hidden;
- }
- @media screen and (max-width: 780px) {
-  .nav{
+}
+
+@media screen and (max-width: 780px) {
+  .nav {
     visibility: hidden;
     position: absolute;
     top: 0;
@@ -38,7 +42,8 @@
     display: flex;
     flex-direction: column;
   }
-  .burgerMenu{
+
+  .burgerMenu {
     visibility: visible;
     position: absolute;
     top: 35px;
@@ -46,222 +51,223 @@
   }
 }
 
- .busqueda {
-   width: 15px;
- }
-
- .botones, .botones a{
-   width: 10em;
-   height: 2.5em;
-   margin: 1.5em;
-   align-items: flex-start;
-   text-decoration: none;
-   border-radius: 1em;
-   align-content: center;
-   align-items: center;
-   font-family: Comic Sans MS; 
-   font-weight:bold;
-   cursor: pointer;
-   color: #38b000;
-   
- }
-
- .close{
-   width: 7em;
-   height: 2em;
-   margin: 1.5em;
-   align-items: flex-start;
-   text-decoration: none;
-   border-radius: 1em;
-   align-content: center;
-   align-items: center;
-   font-family: Comic Sans MS; 
-   font-weight:bold;
-   cursor: pointer;
-   color: #38b000;
-   background-color: #fce811;
- }
-
- .Detail{
-   width: 800px;
-   height: 500px;
-   padding-top: 5em;
-   padding-left: 1em;
-   padding-right: 1em;
-   padding-bottom: 5em;
-   border: 2px solid #e9c46a;
-   color: #d5d7d5;
-   margin: 1em;
-   gap: 1em;
-   text-align: center;
-   font-family: Comic Sans MS; 
-   font-weight:bold; 
-   font-size: 20px;
-   COLOR: #e9c46a; 
-   text-shadow: 0px 0px 9px #10002b;
-   margin: 0 auto;
-   background-color: #001219;
-   
- }
-
- .DetailName {
-  font-size: 70px;
-  padding-bottom: 2%;
-   color: #f7f7f7;
-   text-shadow: 0px 0px 9px #e9c46a;
- }
-   
- .DetailImage{
-   padding-top: 0.5em;
-   position: fixed;
-   left: 18%; 
-   bottom: 28%;
-   height: auto;
-   width: auto;
-   padding-left: 1em;
-   padding-right: 1em;
-   border: 3px solid #e9c46a;
-   border-radius: 2em;
-   background-color: #ffffff;
+.busqueda {
+  width: 15px;
 }
 
- .logout{
-   cursor: pointer;
-   width: 7em;
-   height: 2.5em;
-   margin: 1.5em;
-   align-items: flex-start;
-   border-radius: 1em;
-   align-content: center;
-   align-items: center;
-   font-family: Comic Sans MS; 
-   font-weight:bold;
-   color: #38b000;
-   background-color: #fce811;
+.botones,
+.botones a {
+  width: 10em;
+  height: 2.5em;
+  margin: 1.5em;
+  align-items: flex-start;
+  text-decoration: none;
+  border-radius: 1em;
+  align-content: center;
+  align-items: center;
+  font-family: Comic Sans MS;
+  font-weight: bold;
+  cursor: pointer;
+  color: #38b000;
 
- }
+}
 
- .card {
-   background-image: url("./components/imagenes/rick-and-morty-wallpaper-supreme.jpg");
-   display: inline-block;
-   width: fit-content;
-   border: 2px solid #000;
-   border-radius: 25px;
-   background-color: #d9ed92;
-   color: #d5d7d5;
-   margin: 1em;
-   text-align: center;
-   font-family: Comic Sans MS; 
-   font-weight:bold; 
-   color: #38b000;
-   vertical-align: top;
-   text-shadow:
+.close {
+  width: 7em;
+  height: 2em;
+  margin: 1.5em;
+  align-items: flex-start;
+  text-decoration: none;
+  border-radius: 1em;
+  align-content: center;
+  align-items: center;
+  font-family: Comic Sans MS;
+  font-weight: bold;
+  cursor: pointer;
+  color: #38b000;
+  background-color: #fce811;
+}
+
+.Detail {
+  width: 800px;
+  height: 500px;
+  padding-top: 5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 5em;
+  border: 2px solid #e9c46a;
+  color: #d5d7d5;
+  margin: 1em;
+  gap: 1em;
+  text-align: center;
+  font-family: Comic Sans MS;
+  font-weight: bold;
+  font-size: 20px;
+  COLOR: #e9c46a;
+  text-shadow: 0px 0px 9px #10002b;
+  margin: 0 auto;
+  background-color: #001219;
+
+}
+
+.DetailName {
+  font-size: 70px;
+  padding-bottom: 2%;
+  color: #f7f7f7;
+  text-shadow: 0px 0px 9px #e9c46a;
+}
+
+.DetailImage {
+  padding-top: 0.5em;
+  position: fixed;
+  left: 18%;
+  bottom: 28%;
+  height: auto;
+  width: auto;
+  padding-left: 1em;
+  padding-right: 1em;
+  border: 3px solid #e9c46a;
+  border-radius: 2em;
+  background-color: #ffffff;
+}
+
+.logout {
+  cursor: pointer;
+  width: 7em;
+  height: 2.5em;
+  margin: 1.5em;
+  align-items: flex-start;
+  border-radius: 1em;
+  align-content: center;
+  align-items: center;
+  font-family: Comic Sans MS;
+  font-weight: bold;
+  color: #38b000;
+  background-color: #fce811;
+
+}
+
+.card {
+  background-image: url("./components/imagenes/rick-and-morty-wallpaper-supreme.jpg");
+  display: inline-block;
+  width: fit-content;
+  border: 2px solid #000;
+  border-radius: 25px;
+  background-color: #d9ed92;
+  color: #d5d7d5;
+  margin: 1em;
+  text-align: center;
+  font-family: Comic Sans MS;
+  font-weight: bold;
+  color: #38b000;
+  vertical-align: top;
+  text-shadow:
     -1px -1px 0 #fcfcfc,
     1px -1px 0 #fcfcfc,
     -1px 1px 0 #fcfcfc,
     1px 1px 0 #fcfcfc;
- }
+}
 
- .favButton{ /*{////////////////////////////}*/
-    text-decoration: none;
-  }
+.favButton {
+  /*{////////////////////////////}*/
+  text-decoration: none;
+}
 
- .isFav {
+.isFav {
   margin-right: auto;
   padding: auto;
   cursor: pointer;
   width: fit-content;
   height: fit-content;
-  
-  border-radius: 1em;
- }
 
- .inputsito {
-  border-radius: 1.5em; 
+  border-radius: 1em;
+}
+
+.inputsito {
+  border-radius: 1.5em;
   margin-bottom: 15px;
-  font-family: Comic Sans MS; 
+  font-family: Comic Sans MS;
   width: 100%;
   padding: 10px;
-  box-sizing: border-box; 
-  border: none; 
-  color: #525c66; 
+  box-sizing: border-box;
+  border: none;
+  color: #525c66;
   font-size: 1em;
-  resize: none; 
+  resize: none;
 }
 
 
 
-.submit{
-   cursor: pointer;
-   border-radius: 1em;
-   display: block;
-	background-color: #0e5b20;
-	padding: 10px 45px 10px 45px;
-	border: 0;
-	font-size: 1em; 
-	color: 	#fca311;
-  font-family: Comic Sans MS; 
-   margin: 0 auto;
+.submit {
+  cursor: pointer;
+  border-radius: 1em;
+  display: block;
+  background-color: #0e5b20;
+  padding: 10px 45px 10px 45px;
+  border: 0;
+  font-size: 1em;
+  color: #fca311;
+  font-family: Comic Sans MS;
+  margin: 0 auto;
 }
 
 
-.Form{
-   
-   margin: 0 auto;
+.Form {
+
+  margin: 0 auto;
 }
 
 .About {
-   
-   text-align: center; 
-   font-family: Comic Sans MS; 
-   font-weight:bold; 
-   font-size: 18px; 
-   color: #fbfbfb; 
-   text-shadow: -1px 0 #001219, 0 1px #001219, 1px 0 #0c4f69, 0 -1px #0c445b, 1px 1px 0 #0c485f, 1px 1px 0 #001219, 0.5px 0.5px #001219, 1px 1px #001219, 1.5px 1.5px #001219, 2px 2px #001219, 3px 3px #001219, 2px 2px #001219, 2px 2px #4acc09, 4px 4px #4acc09, 3px 3px #4acc09;
-   text-justify:newspaper;
-   
+
+  text-align: center;
+  font-family: Comic Sans MS;
+  font-weight: bold;
+  font-size: 18px;
+  color: #fbfbfb;
+  text-shadow: -1px 0 #001219, 0 1px #001219, 1px 0 #0c4f69, 0 -1px #0c445b, 1px 1px 0 #0c485f, 1px 1px 0 #001219, 0.5px 0.5px #001219, 1px 1px #001219, 1.5px 1.5px #001219, 2px 2px #001219, 3px 3px #001219, 2px 2px #001219, 2px 2px #4acc09, 4px 4px #4acc09, 3px 3px #4acc09;
+  text-justify: newspaper;
+
 }
 
 .imgAbout {
-   display: flex;
-   justify-content: center;
-   width: fit-content;
-   color: #d5d7d5;
-   margin: auto;
-   border: 5px solid #001219;
-   height: 600px;
-   width: 550px;
-   background-color:#0e5b20 ;
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  color: #d5d7d5;
+  margin: auto;
+  border: 5px solid #001219;
+  height: 600px;
+  width: 550px;
+  background-color: #0e5b20;
 }
 
 .favo {
   width: 10em;
-   height: 2.5em;
-   margin: 1.5em;
-   align-items: flex-start;
-   text-decoration: none;
-   border-radius: 1em;
-   align-content: center;
-   align-items: center;
-   font-family: Comic Sans MS; 
-   font-weight:bold;
-   cursor: pointer;
-   color: #1262b8;
-   background-color: #ffffff;
-   
+  height: 2.5em;
+  margin: 1.5em;
+  align-items: flex-start;
+  text-decoration: none;
+  border-radius: 1em;
+  align-content: center;
+  align-items: center;
+  font-family: Comic Sans MS;
+  font-weight: bold;
+  cursor: pointer;
+  color: #1262b8;
+  background-color: #ffffff;
+
 }
 
 .orderfav {
   text-align: center;
   padding-top: 1%;
-  font-family: Comic Sans MS; 
-  font-weight:bold; 
+  font-family: Comic Sans MS;
+  font-weight: bold;
   color: #1262b8;
   vertical-align: top;
   text-shadow:
-   -1px -1px 0 #d5d2d6,
-   1px -1px 0 #d5d2d6,
-   -1px 1px 0 #d5d2d6,
-   1px 1px 0 #d5d2d6;
+    -1px -1px 0 #d5d2d6,
+    1px -1px 0 #d5d2d6,
+    -1px 1px 0 #d5d2d6,
+    1px 1px 0 #d5d2d6;
 }
-

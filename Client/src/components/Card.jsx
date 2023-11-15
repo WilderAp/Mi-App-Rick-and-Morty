@@ -34,7 +34,7 @@ function Card({id, name, species, gender, image, onClose, addFav, removeFav, myF
    return (
       <div className={style.card}>
          <div className={style.favButton}>
-         <button onClick={handleFavorite}>{isFav ? '💙' : '🤍' }</button>
+         <button style={{backgroundColor: "transparent"}} onClick={handleFavorite}>{isFav ? '💙' : '🤍' }</button>
          </div>
          <button className={style.close} onClick={()=> {onClose(id)}}>〔X〕</button>
       
